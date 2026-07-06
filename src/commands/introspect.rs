@@ -17,7 +17,7 @@ impl SimplePluginCommand for Introspect {
             .dbus_command()
             .accepts_dbus_client_options()
             .accepts_timeout()
-            .input_output_type(Type::Nothing, Type::Record([].into()))
+            .input_output_type(Type::Nothing, Type::Record(vec![].into()))
             .required_named(
                 "dest",
                 SyntaxShape::String,
@@ -44,7 +44,7 @@ impl SimplePluginCommand for Introspect {
         vec!["dbus", "help", "method"]
     }
 
-    fn examples(&self) -> Vec<Example> {
+    fn examples(&self) -> Vec<Example<'_>> {
         vec![
             Example {
                 example: "dbus introspect --dest=org.mpris.MediaPlayer2.spotify \

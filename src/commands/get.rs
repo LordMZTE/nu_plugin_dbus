@@ -49,7 +49,7 @@ impl SimplePluginCommand for Get {
         vec!["dbus", "property", "read"]
     }
 
-    fn examples(&self) -> Vec<Example> {
+    fn examples(&self) -> Vec<Example<'_>> {
         vec![Example {
             example: "dbus get --dest=org.mpris.MediaPlayer2.spotify \
                         /org/mpris/MediaPlayer2 \

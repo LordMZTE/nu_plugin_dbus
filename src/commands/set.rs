@@ -63,7 +63,7 @@ impl SimplePluginCommand for Set {
         vec!["dbus", "property", "write", "put"]
     }
 
-    fn examples(&self) -> Vec<Example> {
+    fn examples(&self) -> Vec<Example<'_>> {
         vec![Example {
             example: "dbus set --dest=org.mpris.MediaPlayer2.spotify \
                             /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player \

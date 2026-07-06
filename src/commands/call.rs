@@ -77,7 +77,7 @@ impl SimplePluginCommand for Call {
         vec!["dbus"]
     }
 
-    fn examples(&self) -> Vec<Example> {
+    fn examples(&self) -> Vec<Example<'_>> {
         vec![
             Example {
                 example: "dbus call --dest=org.freedesktop.DBus \

@@ -37,7 +37,7 @@ impl SimplePluginCommand for List {
         vec!["dbus", "list", "find", "search", "help"]
     }
 
-    fn examples(&self) -> Vec<Example> {
+    fn examples(&self) -> Vec<Example<'_>> {
         vec![
             Example {
                 example: "dbus list",
